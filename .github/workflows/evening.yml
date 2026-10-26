@@ -1,10 +1,6 @@
 name: Gold evening orders
 
-on:
-  schedule:
-    # GitHub uses UTC. 20:05 UTC = 21:05 UK in summer, 21:05 UTC = 21:05 UK in winter.
-    # The script only continues for the run that lands in the 21:00 UK hour.
-    - cron: "5 20,21 * * 1-5"
+on: 
   workflow_dispatch:        # adds a "Run workflow" button for manual tests
     inputs:
       force:
